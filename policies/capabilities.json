@@ -1,10 +1,17 @@
 {
-  "bank.postbank.authenticate": {
-    "secret": "bank/postbank",
+  "bank.postbank.jinchi.authenticate": {
+    "secret": "bank/postbank/jinchi",
     "fields": ["username", "password"],
     "mode": "use",
     "level": "sensitive",
-    "title": "Postbank — log in"
+    "title": "Postbank (jinchi) — log in"
+  },
+  "bank.postbank.vivolution.authenticate": {
+    "secret": "bank/postbank/vivolution",
+    "fields": ["username", "password"],
+    "mode": "use",
+    "level": "sensitive",
+    "title": "Postbank (vivolution) — log in"
   },
   "payment.visa.read": {
     "secret": "payment/visa",
