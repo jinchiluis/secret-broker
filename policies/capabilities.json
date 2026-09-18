@@ -1,0 +1,23 @@
+{
+  "bank.postbank.authenticate": {
+    "secret": "bank/postbank",
+    "fields": ["username", "password"],
+    "mode": "use",
+    "level": "sensitive",
+    "title": "Postbank — log in"
+  },
+  "payment.visa.read": {
+    "secret": "payment/visa",
+    "fields": ["number", "exp", "cvv"],
+    "mode": "use",
+    "level": "highly_sensitive",
+    "title": "Visa card — fill payment form"
+  },
+  "identity.passport.read": {
+    "secret": "identity/passport",
+    "fields": ["number", "expiry", "issued", "nationality"],
+    "mode": "disclose",
+    "level": "highly_sensitive",
+    "title": "Passport data — disclose to assistant"
+  }
+}
