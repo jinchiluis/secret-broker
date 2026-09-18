@@ -20,6 +20,13 @@
     "level": "highly_sensitive",
     "title": "Visa card — fill payment form"
   },
+  "identity.csair_phone.read": {
+    "secret": "identity/csair_phone",
+    "fields": ["phone"],
+    "mode": "use",
+    "level": "normal",
+    "title": "China Southern — phone number for SMS login"
+  },
   "identity.passport.read": {
     "secret": "identity/passport",
     "fields": ["number", "expiry", "issued", "nationality"],
