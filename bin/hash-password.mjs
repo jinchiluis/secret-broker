@@ -40,8 +40,8 @@ if (first !== second) {
   console.error('Passwords did not match.');
   process.exit(1);
 }
-if (first.length < 12) {
-  console.error('Use at least 12 characters.');
+if (first.length < 11) {
+  console.error('Use at least 11 characters.');
   process.exit(1);
 }
 
