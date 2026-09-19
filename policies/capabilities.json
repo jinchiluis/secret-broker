@@ -1,4 +1,11 @@
 {
+  "bank.amazon-visa.authenticate": {
+    "secret": "bank/amazon-visa",
+    "fields": ["email", "access_code"],
+    "mode": "use",
+    "level": "sensitive",
+    "title": "Amazon Visa — log in"
+  },
   "bank.postbank.jinchi.authenticate": {
     "secret": "bank/postbank/jinchi",
     "fields": ["username", "password"],
