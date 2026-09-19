@@ -35,3 +35,6 @@ owned by the `secret-broker` OS user — never by `claude-agent`. Runtime
 config with real values (`BAO_ROLE_ID`, `BAO_SECRET_ID`, `NTFY_URL`,
 `APPROVER_PASSWORD_HASH`, ...) lives in `/etc/secret-broker/broker.env`,
 outside this repo, and is never committed.
+
+See [OPENBAO_PLAYBOOK.md](OPENBAO_PLAYBOOK.md) for the approved workflow to add
+capabilities and enroll or rotate their secret fields without exposing values.
