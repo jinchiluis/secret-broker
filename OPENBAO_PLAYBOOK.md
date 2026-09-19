@@ -66,4 +66,3 @@ Removing a capability and deleting its OpenBao secret are separate operations:
 1. Remove the entry from `policies/capabilities.json` after showing the exact diff and receiving confirmation.
 2. Test, deploy, and restart the broker.
 3. Have a human remove the OpenBao value through an interactive administrator session. Never place the root token or secret value on a command line.
-
