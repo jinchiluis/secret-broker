@@ -55,6 +55,28 @@ Enter these only at the hidden prompts:
 
 SMS one-time codes are never stored. If the provider requests one, the automation must pause for the user.
 
+## Check stored values manually
+
+Only do this in your own private SSH terminal: the requested secret values are printed on screen. The root token is still read silently and does not enter shell history.
+
+```bash
+(
+  export BAO_ADDR=http://127.0.0.1:8200
+  read -r -s -p 'Root token: ' BAO_TOKEN; echo
+  export BAO_TOKEN
+  bao kv get -field=email secret/bank/amazon-visa
+  bao kv get -field=access_code secret/bank/amazon-visa
+)
+```
+
+The parentheses keep the token inside a temporary subshell. For another secret, replace the two `bao kv get` lines with the generic form, once per field:
+
+```bash
+bao kv get -field=<field> secret/<path>
+```
+
+Never paste the output into chat or logs. Clear the terminal afterward, remembering that terminal scrollback may retain what was displayed.
+
 ## Verify use
 
 Run the corresponding assistant tool. A sensitive capability should create a phone approval request. After approval, the broker releases only the catalogued fields once to the requesting device. The tool must consume them transiently and never print or persist them.
